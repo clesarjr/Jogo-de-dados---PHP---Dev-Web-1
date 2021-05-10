@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Jogo dados
-</body>
-</html>
+<?php
+    $pessoa = (isset($_POST['pessoa']) ? $_POST['pessoa'] : '');
+    $maquina = "Máquina";
+
+    $pessoaDado1 = 0;
+    $pessoaDado2 = 0;
+    $maquinaDado1 = 0;
+    $maquinaDado2 = 0;
+
+    $somaPessoa = 0;
+    $somaMaquina = 0;
+?>
