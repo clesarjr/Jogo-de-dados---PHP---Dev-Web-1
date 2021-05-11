@@ -113,6 +113,9 @@
 </body>
 
 <style>
+    body {
+    background-image: url("face_dados/mesa.jpg");
+    }
     #container {
 	    width: 80vw;
 	    margin: 0 auto;
@@ -152,3 +155,4 @@
         position: center;
     }
 </style>
+</html>
