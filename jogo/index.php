@@ -49,6 +49,23 @@
         }
     }
 
+    //retorna o vencedor
+    function ganhador($somaPessoa, $somaMaquina){
+        switch(true){
+            case $somaPessoa > $somaMaquina:
+                return "Parabéns você ganhou!";
+                break;
+            case $somaMaquina > $somaPessoa: 
+                return "Você perdeu!";
+                break;
+            case $somaPessoa == $somaMaquina: 
+                return "A soma das faces foram iguais, você empatou!";
+                break;
+        }
+    }
+
+    $ganhador = ganhador($somaPessoa, $somaMaquina);
+
 ?>
 <html lang="pt-BR">
 <head>
@@ -56,77 +73,82 @@
     <title>Jogo dos dados</title>
 </head>
 <body>
-    <form action="" method="post">
-    <fieldset>
-    <legend>Digite seu nome</legend>
-        <label for="nome">Nome</label>
-        <input type="text" name="pessoa" id="pessoa" >
-    </fieldset>
-    <fieldset>
-        <input type="submit" class="jogar" name="gerarFace" id="gerarFace" value="Jogar">
-    </fieldset>
-    </form>
-    <div class="div-usuario">
-        <?php 
-            gerarFaces($pessoaDado1);
-            gerarFaces($pessoaDado2);
-            echo "<br/>";
-            echo "<h2 style=\"color: black;\">Soma das suas faces: $somaPessoa</h2>"
-        ?>   
-    </div>
-    <div class="resultado">
-        <?php
-            //definir quem foi o vencedor
-            if($somaMaquina > $somaPessoa){
-                echo "Você perdeu!";
-            }else if($somaPessoa > $somaMaquina){
-                echo "Parabéns ".$pessoa." você ganhou!";
-            }else{
-                echo "A soma das faces foram iguais, você empatou!";
-            }
-        ?>
-    </div>  
-    <div class="maquina">
-        <?php 
-            gerarFaces($maquinaDado1);
-            gerarFaces($maquinaDado2);
-            echo "<br/>";
-            echo "<h2 style=\"color: black;\">Soma das faces da máquina: $somaMaquina</h2>"
-        ?>
-    </div>
+    <main id="container">
+		<div class="wrapper">
+            <form action="" method="post">
+            <fieldset>
+                <legend>Digite seu nome</legend>
+                <label for="nome">Nome</label>
+                <input type="text" name="pessoa" id="pessoa" >
+            </fieldset>
+            <fieldset>
+                <input type="submit" class="jogar" name="gerarFace" id="gerarFace" value="Jogar">
+            </fieldset>
+            </form>
+
+        <div class="pessoa">
+            <?php 
+                gerarFaces($pessoaDado1);
+                gerarFaces($pessoaDado2);
+                echo "<br/>";
+                echo "<h2 style=\"color: black;\">Soma das suas faces: $somaPessoa</h2>"
+            ?>   
+        </div>  
+        <div class="maquina">
+            <?php 
+                gerarFaces($maquinaDado1);
+                gerarFaces($maquinaDado2);
+                echo "<br/>";
+                echo "<h2 style=\"color: black;\">Soma das faces da máquina: $somaMaquina</h2>"
+            ?>
+        </div>
+        <div class="resultado">
+            <?php
+                echo "<br/>";
+                echo "<h2 style=\"color: black;\">$ganhador</h2>"
+            ?>
+        </div>
+        </div>
+    </main>
 </body>
 
 <style>
+    #container {
+	    width: 80vw;
+	    margin: 0 auto;
+    }
+
+    .wrapper {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    margin-top: 5rem;
+    }
     .pessoa {
         display: inline-block;
         width: 30%;
         position: top;
         left: 5px;
-        text-align: center;
+        text-align: left;
     }
     .maquina {
         display: inline-block;
         width: 30%;
         position: top;
-        right: -50px;
         text-align: left;
     }
     .resultado {
         display: inline-block;
-        width: 15%;
-        position: relative;
-        top: 0px;
-        left: 50px;
+        width: 30%;
+        position: top;
+        text-align: left;
     }
     .resultado p{
         color: black;
         font-size: 100px;
     }
     .jogar {
-        width: 100px;
-        height: 80px;
-        position: relative;
-        left: 42%;
-        font-size: 20px;
+        display: flex;
+        position: center;
     }
 </style>
