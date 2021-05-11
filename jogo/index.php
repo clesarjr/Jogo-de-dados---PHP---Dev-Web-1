@@ -26,22 +26,22 @@
     function gerarFaces($face) {
         switch($face) {
             case 1:
-                echo "<img src=\"faces_dados/face_nUm.png\" style=\"margin-right: 20px;\" alt=\"\">";
+                echo "<img src=\"faces_dados/face_nUm.png\" style=\"margin-right: 10px;\" alt=\"\">";
                 break;
             case 2:
-                echo "<img src=\"faces_dados/face_nDois.png\" style=\"margin-right: 20px;\" alt=\"\">";
+                echo "<img src=\"faces_dados/face_nDois.png\" style=\"margin-right: 10px;\" alt=\"\">";
                 break;
             case 3:
-                echo "<img src=\"faces_dados/face_nTres.png\" style=\"margin-right: 20px;\" alt=\"\">";
+                echo "<img src=\"faces_dados/face_nTres.png\" style=\"margin-right: 10px;\" alt=\"\">";
                 break;
             case 4:
-                echo "<img src=\"faces_dados/face_nQuatro.png\" style=\"margin-right: 20px;\" alt=\"\">";
+                echo "<img src=\"faces_dados/face_nQuatro.png\" style=\"margin-right: 10px;\" alt=\"\">";
                 break;
             case 5:
-                echo "<img src=\"faces_dados/face_nCinco.png\" style=\"margin-right: 20px;\" alt=\"\">";
+                echo "<img src=\"faces_dados/face_nCinco.png\" style=\"margin-right: 10px;\" alt=\"\">";
                 break;
             case 6:
-                echo "<img src=\"faces_dados/face_nSeis.png\" style=\"margin-right: 20px;\" alt=\"\">";
+                echo "<img src=\"faces_dados/face_nSeis.png\" style=\"margin-right: 10px;\" alt=\"\">";
                 break;
             default:
                 echo "<img src=\"\" alt=\"\">";
@@ -109,7 +109,7 @@
         width: 30%;
         position: top;
         right: -50px;
-        text-align: center;
+        text-align: left;
     }
     .resultado {
         display: inline-block;
