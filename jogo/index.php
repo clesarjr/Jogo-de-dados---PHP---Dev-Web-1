@@ -67,12 +67,11 @@
     </fieldset>
     </form>
     <div class="div-usuario">
-        <h1 style="color: white;">Dados do Usuario</h1>
         <?php 
             gerarFaces($pessoaDado1);
             gerarFaces($pessoaDado2);
             echo "<br/>";
-            echo "<h2 style=\"color: white;\">Resultado $somaPessoa</h2>"
+            echo "<h2 style=\"color: black;\">Soma das suas faces: $somaPessoa</h2>"
         ?>   
     </div>
     <div class="resultado">
@@ -88,12 +87,11 @@
         ?>
     </div>  
     <div class="maquina">
-        <h1 style="color: white;">Dados do Computador</h1>
         <?php 
             gerarFaces($maquinaDado1);
             gerarFaces($maquinaDado2);
             echo "<br/>";
-            echo "<h2 style=\"color: white;\">Resultado $somaMaquina</h2>"
+            echo "<h2 style=\"color: black;\">Soma das faces da máquina: $somaMaquina</h2>"
         ?>
     </div>
 </body>
@@ -101,28 +99,28 @@
 <style>
     .pessoa {
         display: inline-block;
-        width: 40%;
-        position: relative;
+        width: 30%;
+        position: top;
         left: 5px;
         text-align: center;
     }
     .maquina {
         display: inline-block;
-        width: 40%;
-        position: relative;
-        right: -5px;
+        width: 30%;
+        position: top;
+        right: -50px;
         text-align: center;
     }
     .resultado {
         display: inline-block;
         width: 15%;
         position: relative;
-        top: -75px;
-        left: 30px;
+        top: 0px;
+        left: 50px;
     }
     .resultado p{
-        color: white;
-        font-size: 28px;
+        color: black;
+        font-size: 100px;
     }
     .jogar {
         width: 100px;
