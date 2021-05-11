@@ -49,15 +49,6 @@
         }
     }
 
-    //definir quem foi o vencedor
-    if($somaMaquina > $somaPessoa){
-        echo "Você perdeu!";
-    }else if($somaPessoa > $somaMaquina){
-        echo "Parabéns".$pessoa." você ganhou!";
-    }else{
-        echo "A soma das faces foram iguais, você empatou!";
-    }
-    
 ?>
 <html lang="pt-BR">
 <head>
@@ -72,9 +63,40 @@
         <input type="text" name="pessoa" id="pessoa" >
     </fieldset>
     <fieldset>
-        <input type="submit" class="jogar" name="gerarFace" id="gerarFace" value="Faces">
+        <input type="submit" class="jogar" name="gerarFace" id="gerarFace" value="Jogar">
     </fieldset>
     </form>
+    <div class="div-usuario">
+        <h1 style="color: white;">Dados do Usuario</h1>
+        <?php 
+            gerarFaces($pessoaDado1);
+            gerarFaces($pessoaDado2);
+            echo "<br/>";
+            echo "<h2 style=\"color: white;\">Resultado $somaPessoa</h2>"
+        ?>   
+    </div>
+    <div class="resultado">
+        <?php
+            //definir quem foi o vencedor
+            if($somaMaquina > $somaPessoa){
+                echo "Você perdeu!";
+            }else if($somaPessoa > $somaMaquina){
+                echo "Parabéns ".$pessoa." você ganhou!";
+            }else{
+                echo "A soma das faces foram iguais, você empatou!";
+            }
+        ?>
+    </div>  
+    <div class="maquina">
+        <h1 style="color: white;">Dados do Computador</h1>
+        <?php 
+            gerarFaces($maquinaDado1);
+            gerarFaces($maquinaDado2);
+            echo "<br/>";
+            echo "<h2 style=\"color: white;\">Resultado $somaMaquina</h2>"
+        ?>
+    </div>
+</body>
 
 <style>
     .pessoa {
@@ -84,7 +106,6 @@
         left: 5px;
         text-align: center;
     }
-
     .maquina {
         display: inline-block;
         width: 40%;
@@ -92,7 +113,6 @@
         right: -5px;
         text-align: center;
     }
-
     .resultado {
         display: inline-block;
         width: 15%;
@@ -100,12 +120,10 @@
         top: -75px;
         left: 30px;
     }
-
     .resultado p{
         color: white;
         font-size: 28px;
     }
-
     .jogar {
         width: 100px;
         height: 80px;
