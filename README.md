@@ -1,9 +1,3 @@
-Jogo de dados desenvolvido na disciplina de Desenvolvimento Web I
+# Sobre ❓
 
-O jogo:
-
-Existem 2 jogadores, o usuário e o computador;
-
-Os dados são "girados" aleatoriamente;
-
-Quem tiver o maior valor ao final vence.
+Um jogo que roda um dado para o usuário e para o computador, quem tirar o maior número vence.
